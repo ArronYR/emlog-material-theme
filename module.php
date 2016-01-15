@@ -6,6 +6,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 
 global $CACHE;
 $navi_cache = $CACHE->readCache('navi');
+$link_cache = $CACHE->readCache('link');
 
 global $widgets_exist;
 $widgets_exist = [];
@@ -14,6 +15,12 @@ function widget_search($title, $exists=true){
     global $widgets_exist;
     $widgets_exist['search']['title'] = $titles;
     $widgets_exist['search']['exists'] = $exists;
+}
+
+function widget_link($title, $exists=true){
+    global $widgets_exist;
+    $widgets_exist['link']['title'] = $titles;
+    $widgets_exist['link']['exists'] = $exists;
 }
 
 $widgets = !empty($options_cache['widgets1']) ? unserialize($options_cache['widgets1']) : array();

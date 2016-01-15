@@ -5,8 +5,9 @@
 if(!defined('EMLOG_ROOT')) {exit('error!');}
 ?>
 <footer class="page-footer">
-    <?php require_once View::getView('modules/links');?>
-
+    <?php if($widgets_exist['link']['exists']):?>
+        <?php require_once View::getView('modules/links');?>
+    <?php endif;?>
     <div class="footer-copyright">
         <div class="container">
             &copy;&nbsp;<?php echo date('Y');?>&nbsp;&nbsp;|&nbsp;&nbsp;
