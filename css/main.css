@@ -5,6 +5,20 @@
     position: static;
     margin-bottom: 20px;
 }
+.side-nav li{
+    padding: 0;
+}
+ul.side-nav.fixed li a{
+    margin: 0;
+    padding: 0 2rem;
+}
+ul.side-nav.fixed li .collapsible-body li{
+    padding: 0 1rem;
+}
+ul.side-nav.fixed li:hover,
+ul.side-nav.fixed li.active{
+    background-color: #26a69a;
+}
 
 .parallax-container {
     min-height: 180px;
