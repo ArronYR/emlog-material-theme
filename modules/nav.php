@@ -13,25 +13,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
     </div>
     <ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
         <li class="logo center">
-            <?php if ($widgets_exist['blogger']['exists']):?>
-                <a id="logo-container" href="<?php echo BLOG_URL; ?>" class="brand-logo">
-                    <?php if (!empty($user_cache[1]['photo']['src'])): ?>
-                        <img class="circle responsive-img" src="<?php echo BLOG_URL.$user_cache[1]['photo']['src']; ?>">
-                    <?php endif;?>
-                </a>
-                <?php if (!$user_cache[1]['mail'] != ''):?>
-                    <a class="waves-effect waves-teal" href="mailto:<?php echo $user_cache[1]['mail'];?>">
-                        <?php echo $user_cache[1]['name'];?>
-                    </a>
-                <?php else:?>
-                    <div class="blogger-name"><?php echo $user_cache[1]['name'];?></div>
-                <?php endif;?>
-                <p class="blogger-des"><?php echo $user_cache[1]['des']; ?></p>
-            <?php else:?>
-                <a id="logo-container" href="<?php echo BLOG_URL; ?>" class="brand-logo">
-                    <img class="circle responsive-img" src="<?php echo TEMPLATE_URL; ?>images/2230.jpeg">
-                </a>
-            <?php endif;?>
+            <?php require_once View::getView('modules/blogger');?>
         </li>
         <?php if($widgets_exist['search']['exists']): ?>
             <li class="search">

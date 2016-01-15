@@ -10,24 +10,36 @@ $link_cache = $CACHE->readCache('link');
 $user_cache = $CACHE->readCache('user');
 
 global $widgets_exist;
+global $widgets_left;
 $widgets_exist = [];
+$widgets_left = 0;
+
 // 个人资料
 function widget_blogger($title, $exists=true){
     global $widgets_exist;
-    $widgets_exist['blogger']['title'] = $titles;
+    $widgets_exist['blogger']['title'] = $title;
     $widgets_exist['blogger']['exists'] = $exists;
 }
+
+// 日历
+function widget_calendar($title, $exists=true){
+    global $widgets_exist, $widgets_left;
+    $widgets_exist['calendar']['title'] = $title;
+    $widgets_exist['calendar']['exists'] = $exists;
+    $widgets_left += 1;
+}
+
 // 搜索
 function widget_search($title, $exists=true){
     global $widgets_exist;
-    $widgets_exist['search']['title'] = $titles;
+    $widgets_exist['search']['title'] = $title;
     $widgets_exist['search']['exists'] = $exists;
 }
 
 // 友情链接
 function widget_link($title, $exists=true){
     global $widgets_exist;
-    $widgets_exist['link']['title'] = $titles;
+    $widgets_exist['link']['title'] = $title;
     $widgets_exist['link']['exists'] = $exists;
 }
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * 侧边栏组件: 最新微语
+ * 侧边栏组件: 标签
  */
 if(!defined('EMLOG_ROOT')) {exit('error!');}
 ?>
 
-最新微语
+标签
