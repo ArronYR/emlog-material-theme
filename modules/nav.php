@@ -33,7 +33,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                 $value['url'] = $value['isdefault'] == 'y' ? BLOG_URL . $value['url'] : trim($value['url'], '/');
                 $current_tab = BLOG_URL . trim(Dispatcher::setPath(), '/') == $value['url'] ? 'active' : '';
             ?>
-            <?php if (!empty($value['childnavi'])) :?>
+            <?php if (!empty($value['childnavi']) || !empty($value['children'])) :?>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li class="bold">
@@ -41,6 +41,10 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                             <div class="collapsible-body">
                                 <ul>
                                     <?php foreach ($value['childnavi'] as $row):?>
+                                        <?php $newtab = $row['newtab'] == 'y' ? 'target="_blank"' : '';?>
+                                        <li><a class="waves-effect waves-light" href="<?php echo $row['url'];?>" <?php echo $newtab;?>><?php echo $row['naviname'];?></a></li>
+                                    <?php endforeach;?>
+                                    <?php foreach ($value['children'] as $row):?>
                                         <?php $newtab = $row['newtab'] == 'y' ? 'target="_blank"' : '';?>
                                         <li><a class="waves-effect waves-light" href="<?php echo $row['url'];?>" <?php echo $newtab;?>><?php echo $row['naviname'];?></a></li>
                                     <?php endforeach;?>
