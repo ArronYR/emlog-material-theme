@@ -3,6 +3,7 @@
  * 页面模块: 导航栏组件
  */
 if(!defined('EMLOG_ROOT')) {exit('error!');}
+var_dump($widgets_exist);
 ?>
 
 <header>
@@ -17,14 +18,18 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                 <img class="circle responsive-img" src="<?php echo TEMPLATE_URL; ?>images/2230.jpeg">
             </a>
         </li>
-        <li class="search">
-            <div class="search-wrapper card">
-                <form name="keyform" method="get" action="<?php echo BLOG_URL; ?>index.php">
-                    <input name="keyword" class="search" type="text" id="search">
-                    <i class="material-icons">search</i>
-                </form>
-            </div>
-        </li>
+        <?php if($widgets_exist['search']['exists']): ?>
+            <li class="search">
+                <div class="search-wrapper card">
+                    <form name="keyform" method="get" action="<?php echo BLOG_URL; ?>index.php">
+                        <input name="keyword" class="search" type="text" id="search">
+                        <i class="material-icons">search</i>
+                    </form>
+                </div>
+            </li>
+        <?php else:?>
+            <hr>
+        <?php endif;?>
         <?php foreach ($navi_cache as $value):?>
             <?php if($value['pid'] != 0){continue;}?>
             <?php if($value['url'] == ROLE_ADMIN && (ROLE == ROLE_ADMIN || ROLE == ROLE_WRITER)):?>
