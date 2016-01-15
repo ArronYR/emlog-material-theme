@@ -10,6 +10,9 @@ $link_cache = $CACHE->readCache('link');
 $user_cache = $CACHE->readCache('user');
 $tag_cache = $CACHE->readCache('tags');
 $sort_cache = $CACHE->readCache('sort');
+$newtws_cache = $CACHE->readCache('newtw');
+
+$istwitter = Option::get('istwitter');
 
 global $widgets_exist;
 global $widgets_left;
@@ -44,6 +47,14 @@ function widget_sort($title, $exists=true){
     global $widgets_exist, $widgets_left;
     $widgets_exist['sort']['title'] = $title;
     $widgets_exist['sort']['exists'] = $exists;
+    $widgets_left += 1;
+}
+
+// 最新微语
+function widget_twitter($title, $exists=true){
+    global $widgets_exist, $widgets_left;
+    $widgets_exist['twitter']['title'] = $title;
+    $widgets_exist['twitter']['exists'] = $exists;
     $widgets_left += 1;
 }
 

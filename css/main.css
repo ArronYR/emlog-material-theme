@@ -61,6 +61,14 @@ ul.side-nav.fixed li.active{
 .calendar td{
     padding: 5px 5px;
 }
+#twitter .twitter-title,
+#twitter time{
+    font-size: 12px;
+    display: block;
+}
+.twitter-more a{
+    font-size: 12px;
+}
 
 footer.page-footer{
     padding-top: 0;
@@ -74,10 +82,16 @@ footer.page-footer .links{
     .row .side-widgets {
         margin-right: 20px;
     }
+    main .container{
+        width: 90%;
+    }
 }
 @media only screen and (min-width: 993px){
     .row .side-widgets {
         margin-right: 0px;
+    }
+    main .container{
+        width: 90%;
     }
 }
 
