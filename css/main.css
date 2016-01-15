@@ -1,14 +1,23 @@
+.brand-logo img{
+    width: 100px;
+}
+#nav-mobile li.search{
+    position: static;
+    margin-bottom: 20px;
+}
+
 .parallax-container {
-    min-height: 380px;
+    min-height: 180px;
     line-height: 0;
     height: auto;
     color: rgba(255,255,255,.9);
 }
 
-.parallax-container .section {
-    width: 100%;
+
+footer.page-footer{
+    padding-top: 0;
 }
 
-.logo-image img{
-    width: 100px;
+footer.page-footer .links{
+    padding-top: 20px;
 }

@@ -26,7 +26,7 @@ require_once View::getView('module');
     <link href="<?php echo BLOG_URL; ?>admin/editor/plugins/code/prettify.css" rel="stylesheet" type="text/css" />
 
     <link href="<?php echo TEMPLATE_URL; ?>css/icon.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/materialize.min.css"/>
+    <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/ghpages-materialize.css"/>
     <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/main.css?<?php echo rand();?>"/>
 
     <script src="<?php echo BLOG_URL; ?>admin/editor/plugins/code/prettify.js" type="text/javascript"></script>
@@ -42,31 +42,7 @@ require_once View::getView('module');
 </head>
 
 <body>
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="logo-image center">
-                    <img class="circle responsive-img" src="<?php echo TEMPLATE_URL; ?>images/2230.jpeg">
-                </div>
-                <div class="row center">
-                    <h5 class="header col s12 light"><?php echo $bloginfo; ?></h5>
-                </div>
-                <div class="row center">
-                    <a href="<?php echo BLOG_URL; ?>" class="btn-large waves-effect waves-light teal lighten-1"><?php echo $blogname; ?></a>
-                </div>
-            </div>
-        </div>
-        <div class="parallax">
-            <img src="<?php echo BLOG_URL.Option::get('topimg'); ?>">
-        </div>
-    </div>
-    <div id="wrap">
-        <div id="header">
-            <h1><a href="<?php echo BLOG_URL; ?>"><?php echo $blogname; ?></a></h1>
-            <h3><?php echo $bloginfo; ?></h3>
-        </div>
-        <?php if(Option::get('topimg')): ?>
-            <div id="banner"><a href="<?php echo BLOG_URL; ?>"><img src="<?php echo BLOG_URL.Option::get('topimg'); ?>" height="134" width="960" /></a></div>
-        <?php endif;?>
-        <div id="nav"><?php blog_navi();?></div>
-    </div>
+    <?php require_once View::getView('modules/nav');?>
+
+    <main>
+        <?php require_once View::getView('modules/banner');?>
