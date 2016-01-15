@@ -7,16 +7,24 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 global $CACHE;
 $navi_cache = $CACHE->readCache('navi');
 $link_cache = $CACHE->readCache('link');
+$user_cache = $CACHE->readCache('user');
 
 global $widgets_exist;
 $widgets_exist = [];
-
+// 个人资料
+function widget_blogger($title, $exists=true){
+    global $widgets_exist;
+    $widgets_exist['blogger']['title'] = $titles;
+    $widgets_exist['blogger']['exists'] = $exists;
+}
+// 搜索
 function widget_search($title, $exists=true){
     global $widgets_exist;
     $widgets_exist['search']['title'] = $titles;
     $widgets_exist['search']['exists'] = $exists;
 }
 
+// 友情链接
 function widget_link($title, $exists=true){
     global $widgets_exist;
     $widgets_exist['link']['title'] = $titles;

@@ -2,7 +2,24 @@ hr{
     border-color: #ee6e73;
     border-top: none;
 }
-
+#logo-container{
+    height: auto;
+    margin-bottom: 0;
+}
+.blogger-name,
+.blogger-des{
+    line-height: 24px;
+    margin: 0;
+}
+.blogger-name{
+    font-size: 14px;
+}
+.blogger-des{
+    font-size: 12px;
+}
+ul.side-nav.fixed li.logo{
+    margin-bottom: 20px;
+}
 .brand-logo img{
     width: 100px;
 }
