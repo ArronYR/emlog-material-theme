@@ -19,8 +19,10 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
         </li>
         <li class="search">
             <div class="search-wrapper card">
-                <input id="search"><i class="material-icons">search</i>
-                <div class="search-results"></div>
+                <form name="keyform" method="get" action="<?php echo BLOG_URL; ?>index.php">
+                    <input name="keyword" class="search" type="text" id="search">
+                    <i class="material-icons">search</i>
+                </form>
             </div>
         </li>
         <?php foreach ($navi_cache as $value):?>

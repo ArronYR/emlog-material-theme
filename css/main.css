@@ -5,6 +5,9 @@
     position: static;
     margin-bottom: 20px;
 }
+.search button[type='submit']{
+    
+}
 .side-nav li{
     padding: 0;
 }
