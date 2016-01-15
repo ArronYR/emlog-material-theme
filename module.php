@@ -8,6 +8,8 @@ global $CACHE;
 $navi_cache = $CACHE->readCache('navi');
 $link_cache = $CACHE->readCache('link');
 $user_cache = $CACHE->readCache('user');
+$tag_cache = $CACHE->readCache('tags');
+$sort_cache = $CACHE->readCache('sort');
 
 global $widgets_exist;
 global $widgets_left;
@@ -26,6 +28,22 @@ function widget_calendar($title, $exists=true){
     global $widgets_exist, $widgets_left;
     $widgets_exist['calendar']['title'] = $title;
     $widgets_exist['calendar']['exists'] = $exists;
+    $widgets_left += 1;
+}
+
+// 标签
+function widget_tag($title, $exists=true){
+    global $widgets_exist, $widgets_left;
+    $widgets_exist['tag']['title'] = $title;
+    $widgets_exist['tag']['exists'] = $exists;
+    $widgets_left += 1;
+}
+
+// 分类
+function widget_sort($title, $exists=true){
+    global $widgets_exist, $widgets_left;
+    $widgets_exist['sort']['title'] = $title;
+    $widgets_exist['sort']['exists'] = $exists;
     $widgets_left += 1;
 }
 

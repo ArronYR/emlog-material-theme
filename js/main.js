@@ -13,6 +13,8 @@
             }
         });
 
+        // $('.side-widgets').addClass('margin-top').eq(0).removeClass('margin-top');
+
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
 
