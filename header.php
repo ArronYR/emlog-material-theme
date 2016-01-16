@@ -44,5 +44,3 @@ require_once View::getView('module');
 <body>
     <?php require_once View::getView('modules/nav');?>
 
-    <main>
-        <?php require_once View::getView('modules/banner');?>

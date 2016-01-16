@@ -11,8 +11,17 @@ $user_cache = $CACHE->readCache('user');
 $tag_cache = $CACHE->readCache('tags');
 $sort_cache = $CACHE->readCache('sort');
 $newtws_cache = $CACHE->readCache('newtw');
+$com_cache = $CACHE->readCache('comment');
+$newLogs_cache = $CACHE->readCache('newlog');
 
 $istwitter = Option::get('istwitter');
+
+// 热门文章 && 随机文章
+$index_hotlognum = Option::get('index_hotlognum');
+$index_randlognum = Option::get('index_randlognum');
+$Log_Model = new Log_Model();
+$hotLogs = $Log_Model->getHotLog($index_hotlognum);
+$randLogs = $Log_Model->getRandLog($index_randlognum);
 
 global $widgets_exist;
 global $widgets_num;
@@ -63,6 +72,30 @@ function widget_newcomm($title, $exists=true){
     global $widgets_exist, $widgets_num;
     $widgets_exist['newcomm']['title'] = $title;
     $widgets_exist['newcomm']['exists'] = $exists;
+    $widgets_num += 1;
+}
+
+// 最新文章
+function widget_newlog($title, $exists=true){
+    global $widgets_exist, $widgets_num;
+    $widgets_exist['newlog']['title'] = $title;
+    $widgets_exist['newlog']['exists'] = $exists;
+    $widgets_num += 1;
+}
+
+// 热门文章
+function widget_hotlog($title, $exists=true){
+    global $widgets_exist, $widgets_num;
+    $widgets_exist['hotlog']['title'] = $title;
+    $widgets_exist['hotlog']['exists'] = $exists;
+    $widgets_num += 1;
+}
+
+// 随机文章
+function widget_random_log($title, $exists=true){
+    global $widgets_exist, $widgets_num;
+    $widgets_exist['randlog']['title'] = $title;
+    $widgets_exist['randlog']['exists'] = $exists;
     $widgets_num += 1;
 }
 

@@ -7,6 +7,9 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 
 <?php doAction('index_loglist_top'); ?>
 
+<main>
+    <?php require_once View::getView('modules/banner');?>
+    
     <div class="container">
         <div class="row padding-top">
             <?php if ($widgets_num > 0): ?>
