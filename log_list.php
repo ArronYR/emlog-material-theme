@@ -9,7 +9,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 
     <div class="container">
         <div class="row padding-top">
-            <?php if ($widgets_left > 0): ?>
+            <?php if ($widgets_num > 0): ?>
                 <div class="section col s12 m12 l9 margin-bottom">
             <?php else:?>
                 <div class="section col s12 margin-bottom">

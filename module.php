@@ -15,9 +15,9 @@ $newtws_cache = $CACHE->readCache('newtw');
 $istwitter = Option::get('istwitter');
 
 global $widgets_exist;
-global $widgets_left;
+global $widgets_num;
 $widgets_exist = [];
-$widgets_left = 0;
+$widgets_num = 0;
 
 // 个人资料
 function widget_blogger($title, $exists=true){
@@ -28,34 +28,42 @@ function widget_blogger($title, $exists=true){
 
 // 日历
 function widget_calendar($title, $exists=true){
-    global $widgets_exist, $widgets_left;
+    global $widgets_exist, $widgets_num;
     $widgets_exist['calendar']['title'] = $title;
     $widgets_exist['calendar']['exists'] = $exists;
-    $widgets_left += 1;
+    $widgets_num += 1;
 }
 
 // 标签
 function widget_tag($title, $exists=true){
-    global $widgets_exist, $widgets_left;
+    global $widgets_exist, $widgets_num;
     $widgets_exist['tag']['title'] = $title;
     $widgets_exist['tag']['exists'] = $exists;
-    $widgets_left += 1;
+    $widgets_num += 1;
 }
 
 // 分类
 function widget_sort($title, $exists=true){
-    global $widgets_exist, $widgets_left;
+    global $widgets_exist, $widgets_num;
     $widgets_exist['sort']['title'] = $title;
     $widgets_exist['sort']['exists'] = $exists;
-    $widgets_left += 1;
+    $widgets_num += 1;
 }
 
 // 最新微语
 function widget_twitter($title, $exists=true){
-    global $widgets_exist, $widgets_left;
+    global $widgets_exist, $widgets_num;
     $widgets_exist['twitter']['title'] = $title;
     $widgets_exist['twitter']['exists'] = $exists;
-    $widgets_left += 1;
+    $widgets_num += 1;
+}
+
+// 最新评论
+function widget_newcomm($title, $exists=true){
+    global $widgets_exist, $widgets_num;
+    $widgets_exist['newcomm']['title'] = $title;
+    $widgets_exist['newcomm']['exists'] = $exists;
+    $widgets_num += 1;
 }
 
 // 搜索

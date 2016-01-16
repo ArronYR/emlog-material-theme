@@ -29,6 +29,13 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
             <hr class="hide-on-med-and-up">
         <?php endif;?>
 
+        <?php if ($widgets_exist['newcomm']['exists']):?>
+            <div class="col s12 m4 l12 z-depth-1 hoverable side-widgets">
+                <?php require_once View::getView('modules/newcomm');?>
+            </div>
+            <hr class="hide-on-med-and-up">
+        <?php endif;?>
+
         <?php if ($widgets_exist['twitter']['exists']):?>
             <div class="col s12 m4 l12 z-depth-1 hoverable side-widgets">
                 <?php require_once View::getView('modules/twitter');?>
