@@ -13,6 +13,7 @@ $sort_cache = $CACHE->readCache('sort');
 $newtws_cache = $CACHE->readCache('newtw');
 $com_cache = $CACHE->readCache('comment');
 $newLogs_cache = $CACHE->readCache('newlog');
+$record_cache = $CACHE->readCache('record');
 
 $istwitter = Option::get('istwitter');
 
@@ -104,6 +105,21 @@ function widget_search($title, $exists=true){
     global $widgets_exist;
     $widgets_exist['search']['title'] = $title;
     $widgets_exist['search']['exists'] = $exists;
+}
+
+// 归档
+function widget_archive($title, $exists=true){
+    global $widgets_exist;
+    $widgets_exist['archive']['title'] = $title;
+    $widgets_exist['archive']['exists'] = $exists;
+}
+
+// 自定义组件
+function widget_custom_text($title, $content, $exists=true){
+    global $widgets_exist;
+    $widgets_exist['custom']['title'] = $title;
+    $widgets_exist['custom']['title'] = $content;
+    $widgets_exist['custom']['exists'] = $exists;
 }
 
 // 友情链接

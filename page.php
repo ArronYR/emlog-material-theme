@@ -6,7 +6,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 ?>
 
 <main>
-    <div class="container">
+    <div class="container" id="content">
         <h2><?php echo $log_title; ?></h2>
         <?php echo $log_content; ?>
         <?php blog_comments($comments); ?>
