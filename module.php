@@ -112,14 +112,16 @@ function widget_archive($title, $exists=true){
     global $widgets_exist;
     $widgets_exist['archive']['title'] = $title;
     $widgets_exist['archive']['exists'] = $exists;
+    $widgets_num += 1;
 }
 
 // 自定义组件
 function widget_custom_text($title, $content, $exists=true){
     global $widgets_exist;
     $widgets_exist['custom']['title'] = $title;
-    $widgets_exist['custom']['title'] = $content;
+    $widgets_exist['custom']['content'] = $content;
     $widgets_exist['custom']['exists'] = $exists;
+    $widgets_num += 1;
 }
 
 // 友情链接
@@ -127,6 +129,30 @@ function widget_link($title, $exists=true){
     global $widgets_exist;
     $widgets_exist['link']['title'] = $title;
     $widgets_exist['link']['exists'] = $exists;
+}
+
+//blog：置顶
+function topflg($top, $sortop='n', $sortid=null){
+    if(blog_tool_ishome()) {
+       echo $top == 'y' ? "<img src=\"".TEMPLATE_URL."/images/top.png\" title=\"首页置顶文章\" /> " : '';
+    } elseif($sortid){
+       echo $sortop == 'y' ? "<img src=\"".TEMPLATE_URL."/images/sortop.png\" title=\"分类置顶文章\" /> " : '';
+    }
+}
+
+//blog：编辑
+function editflg($logid,$author){
+    $editflg = ROLE == ROLE_ADMIN || $author == UID ? '<a href="'.BLOG_URL.'admin/write_log.php?action=edit&gid='.$logid.'" target="_blank">编辑</a>' : '';
+    echo $editflg;
+}
+
+//blog-tool:判断是否是首页
+function blog_tool_ishome(){
+    if (BLOG_URL . trim(Dispatcher::setPath(), '/') == BLOG_URL){
+        return true;
+    } else {
+        return FALSE;
+    }
 }
 
 $widgets = !empty($options_cache['widgets1']) ? unserialize($options_cache['widgets1']) : array();

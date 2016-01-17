@@ -8,7 +8,11 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
     <div class="container">
         <div class="row">
             <div class="col s12 m9">
-                <h1 class="header center-on-small-only"><?php echo $blogname; ?></h1>
+                <h1 class="header center-on-small-only">
+                    <a href="<?php echo BLOG_URL; ?>" class="white-text waves-effect waves-light">
+                        <?php echo $blogname; ?>
+                    </a>
+                </h1>
                 <h4 class="light red-text text-lighten-4 center-on-small-only"><?php echo $bloginfo; ?></h4>
             </div>
         </div>

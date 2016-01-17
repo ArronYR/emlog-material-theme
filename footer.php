@@ -19,6 +19,25 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
         </div>
     </div>
 </footer>
+
+<!-- 添加 class click-to-toggle 为点击切换, horizontal 为水平-->
+<div class="fixed-action-btn hide" style="bottom: 25px; right: 24px;" id="fixed-menu">
+    <a class="btn-floating btn-large waves-effect waves-light green">
+        <i class="large mdi-navigation-menu"></i>
+    </a>
+    <ul>
+        <li>
+            <a class="btn-floating waves-effect waves-light red" id="goto-top" title="回到顶部">
+                <i class="material-icons">navigation</i>
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo BLOG_URL; ?>" class="btn-floating waves-effect waves-light blue" title="首页">
+                <i class="material-icons">home</i>
+            </a>
+        </li>
+    </ul>
+</div>
 <script>prettyPrint();</script>
 
 </body>

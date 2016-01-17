@@ -54,12 +54,14 @@ ul.side-nav.fixed li.active{
 }
 
 .side-widgets{
+    padding: 0!important;
     margin-bottom: 20px;
 }
 /* calendar */
 .calendartop td,
 .calendar td{
     padding: 5px 5px;
+    text-align: center;
 }
 #twitter .twitter-title,
 #twitter time{
@@ -95,6 +97,13 @@ footer.page-footer .links{
     }
 }
 
+.collection{
+    border: none;
+    margin-bottom: 0!important;
+}
+.collection .collection-item{
+    background: transparent;
+}
 
 /* Padding helpers */
 .padding {

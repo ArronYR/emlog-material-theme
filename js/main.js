@@ -13,10 +13,21 @@
             }
         });
 
-        // $('.side-widgets').addClass('margin-top').eq(0).removeClass('margin-top');
-
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
+
+        $(window).scroll(function(){
+            if ( $(window).scrollTop() > 400){
+                $("#fixed-menu").removeClass('hide').fadeIn(500);
+            }else{
+                $("#fixed-menu").fadeOut(500);
+            }
+        });
+
+        $("#goto-top").click(function(){
+            $('body,html').animate({scrollTop:0},1000);
+            return false;
+        });
 
     });
 

@@ -4,7 +4,7 @@ Template Name:MaterialTheme
 Description:Material Design主题，美观优雅
 Version:1.0
 Author:Arron
-Author Url:http://www.helloarron.com
+Author Url:http://blog.helloarron.com
 Sidebar Amount:1
 */
 if(!defined('EMLOG_ROOT')) {exit('error!');}

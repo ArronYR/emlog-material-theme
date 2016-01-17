@@ -5,7 +5,7 @@
 if(!defined('EMLOG_ROOT')) {exit('error!');}
 ?>
 
-<h5 class="light teal-text text-darken-2 center">
+<h5 class="light teal-text text-darken-2 center padding-horizontal">
     <?php echo $widgets_exist['twitter']['title'];?>
 
     <?php if ($istwitter == 'y') :?>
