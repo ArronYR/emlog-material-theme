@@ -32,12 +32,9 @@ require_once View::getView('module');
     <script src="<?php echo BLOG_URL; ?>admin/editor/plugins/code/prettify.js" type="text/javascript"></script>
     <script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/materialize.min.js"></script>
+    <script src="<?php echo BLOG_URL; ?>include/lib/js/common_tpl.js" type="text/javascript"></script>
     <script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/main.js?<?php echo rand();?>"></script>
 
-    <script src="<?php echo BLOG_URL; ?>include/lib/js/common_tpl.js" type="text/javascript"></script>
-    <!--[if IE 6]>
-    <script src="<?php echo TEMPLATE_URL; ?>js/iefix.js" type="text/javascript"></script>
-    <![endif]-->
     <?php doAction('index_head'); ?>
 </head>
 
