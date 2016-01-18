@@ -28,10 +28,11 @@
 通过修改主题目录下的`header.php`引入不同的样式即可：
 
 ```css
-<link href="<?php echo TEMPLATE_URL; ?>css/prettify-obsidian-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL; ?>css/prettify-default-theme.css" rel="stylesheet">
 <link href="<?php echo TEMPLATE_URL; ?>css/prettify-desert-theme.css" rel="stylesheet">
-<link href="<?php echo TEMPLATE_URL; ?>css/prettify-doxy-theme.css" rel="stylesheet">
 <link href="<?php echo TEMPLATE_URL; ?>css/prettify-sunburst-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL; ?>css/prettify-obsidian-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL; ?>css/prettify-doxy-theme.css" rel="stylesheet">
 ```
 
 ## About me
