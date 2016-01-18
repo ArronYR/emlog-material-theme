@@ -106,15 +106,14 @@ footer.page-footer .links{
 }
 
 pre[class*=lang-]{
-    max-height: 320px;
+    max-height: 480px;
     font-size: 14px;
-    padding: 1em;
+    padding: 2px;
     margin: .5em 0;
     overflow: auto;
-    border-radius: 0.3em;
+    border-radius: 0.2em;
     background: #272822;
     color: #f8f8f2;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     direction: ltr;
     text-align: left;
@@ -178,7 +177,7 @@ pre[class*=lang-]{
     font-weight: 300;
     font-size: 0.8rem;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #E57373;
     border-radius: 2px;
     min-width: 3rem;
     padding: 0 6px;

@@ -23,9 +23,9 @@ require_once View::getView('module');
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?php echo BLOG_URL; ?>xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?php echo BLOG_URL; ?>wlwmanifest.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS"  href="<?php echo BLOG_URL; ?>rss.php" />
-    <link href="<?php echo BLOG_URL; ?>admin/editor/plugins/code/prettify.css" rel="stylesheet" type="text/css" />
 
     <link href="<?php echo TEMPLATE_URL; ?>css/icon.css" rel="stylesheet">
+    <link href="<?php echo TEMPLATE_URL; ?>css/prettify-obsidian-theme.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/ghpages-materialize.css"/>
     <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/main.css?<?php echo rand();?>"/>
 

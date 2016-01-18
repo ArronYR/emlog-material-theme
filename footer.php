@@ -38,7 +38,6 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
         </li>
     </ul>
 </div>
-<script>prettyPrint();</script>
 
 </body>
 </html>

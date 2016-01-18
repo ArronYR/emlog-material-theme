@@ -31,6 +31,7 @@
             return false;
         });
 
+        prettyPrint();
     });
 
 })(jQuery);

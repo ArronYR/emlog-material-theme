@@ -29,7 +29,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                                     <?php echo $value['log_title']; ?>
                                 </a>
                             </h5>
-                            <div class="text-small right-align">
+                            <div class="text-small">
                                 <time class="light margin-right">
                                     <?php echo gmdate('Y-n-j', $value['date']); ?>
                                 </time>
@@ -45,12 +45,9 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                                     <a href="<?php echo BLOG_URL;?>admin/write_log.php?action=edit&gid=<?php echo $value['logid'];?>" target="_blank">编辑</a>
                                 <?php endif;?>
                             </div>
-                            <div class="light log-desc">
-                                <?php echo $value['log_description'];?>
-                            </div>
-                            <div class="margin-top-sm">
+                            <div class="margin-vertical-sm">
                                 <div class="tag" style="display: inline-block;">
-                                    <span class="light teal-text text-lighten-2">标签: &nbsp;</span>
+                                    <span class="light red-text text-lighten-2">标签: &nbsp;</span>
                                     <?php if (!empty($log_cache_tags[$value['logid']])):?>
                                         <?php foreach ($log_cache_tags[$value['logid']] as $tag):?>
                                             <a class="light" href="<?php echo Url::tag($tag['tagurl']);?>">
@@ -69,6 +66,9 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                                         浏览(<?php echo $value['views']; ?>)
                                     </a>
                                 </div>
+                            </div>
+                            <div class="light log-desc">
+                                <?php echo $value['log_description'];?>
                             </div>
                         </div>
                     </div>
