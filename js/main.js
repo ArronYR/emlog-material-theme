@@ -24,6 +24,8 @@
             }
         });
 
+        $('pre[class*=lang-]').addClass('prettyprint linenums');
+
         $('#pagenavi').find('a').wrap('<li class="waves-effect"></li>').end().find('span').wrap('<li class="active"></li>')
 
         $("#goto-top").click(function(){

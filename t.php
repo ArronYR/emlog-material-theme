@@ -23,7 +23,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
         <?php endif;?>
     </div>
 
-    <div class="container" id="content">
+    <div class="container" id="t">
         微语部分
     </div>
 </main>
