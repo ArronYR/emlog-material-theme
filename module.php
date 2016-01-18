@@ -135,17 +135,12 @@ function widget_link($title, $exists=true){
 
 //blog：置顶
 function topflg($top, $sortop='n', $sortid=null){
-    if(blog_tool_ishome()) {
-       echo $top == 'y' ? "<img src=\"".TEMPLATE_URL."/images/top.png\" title=\"首页置顶文章\" /> " : '';
-    } elseif($sortid){
-       echo $sortop == 'y' ? "<img src=\"".TEMPLATE_URL."/images/sortop.png\" title=\"分类置顶文章\" /> " : '';
+    if(blog_tool_ishome() && $top == 'y') {
+       return true;
+    } elseif($sortid && $sortop == 'y'){
+       return true;
     }
-}
-
-//blog：编辑
-function editflg($logid,$author){
-    $editflg = ROLE == ROLE_ADMIN || $author == UID ? '<a href="'.BLOG_URL.'admin/write_log.php?action=edit&gid='.$logid.'" target="_blank">编辑</a>' : '';
-    echo $editflg;
+    return false;
 }
 
 //blog-tool:判断是否是首页

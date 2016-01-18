@@ -22,11 +22,14 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                     <div class="row margin-bottom-xl padding-right">
                         <div class="hoverable padding-sm">
                             <h5>
+                                <?php if(topflg($value['top'], $value['sortop'], isset($sortid)?$sortid:'')): ?>
+                                    <i class="red-text text-lighten-2 material-icons">turned_in</i>
+                                <?php endif;?>
                                 <a class="light teal-text text-lighten-2" href="<?php echo $value['log_url']; ?>">
                                     <?php echo $value['log_title']; ?>
                                 </a>
                             </h5>
-                            <div class="text-small">
+                            <div class="text-small right-align">
                                 <time class="light margin-right">
                                     <?php echo gmdate('Y-n-j', $value['date']); ?>
                                 </time>
@@ -42,7 +45,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                                     <a href="<?php echo BLOG_URL;?>admin/write_log.php?action=edit&gid=<?php echo $value['logid'];?>" target="_blank">编辑</a>
                                 <?php endif;?>
                             </div>
-                            <div class="log-desc">
+                            <div class="light log-desc">
                                 <?php echo $value['log_description'];?>
                             </div>
                         </div>

@@ -142,23 +142,27 @@ pre[class*=lang-]{
     padding: 10px 0;
 }
 .log-desc *{
-    font-size: 14px;
+    font-size: 14px !important;
     padding: 0;
     margin: 0;
     line-height: 1.5em;
-    border: none;
+    border: none !important;
+    font-weight: normal!important;
 }
 .log-desc img{
     width: 100%;
 }
+.log-desc ol{
+    list-style: none !important;
+}
 .log-desc a{
     max-width: 100%;
-    -ms-word-break: word-wrap;
-    word-break: word-wrap;
-    word-wrap: break-word;
+    -ms-word-break: word-wrap !important;
+    word-break: word-wrap !important;
+    word-wrap: break-word !important;
 }
 .log-desc .readmore{
-    margin-top: 16px;
+    margin-top: 16px !important;
 }
 .log-desc .readmore a{
     color: #E57373 !important;
