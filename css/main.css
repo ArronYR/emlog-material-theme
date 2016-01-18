@@ -135,7 +135,34 @@ pre[class*=lang-]{
 .pagination li.active{
     color: #fff;
 }
-
+.text-small{
+    font-size: 12px;
+}
+.log-desc{
+    padding: 10px 0;
+}
+.log-desc *{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5em;
+    border: none;
+}
+.log-desc img{
+    width: 100%;
+}
+.log-desc a{
+    max-width: 100%;
+    -ms-word-break: word-wrap;
+    word-break: word-wrap;
+    word-wrap: break-word;
+}
+.log-desc .readmore{
+    margin-top: 16px;
+}
+.log-desc .readmore a{
+    color: #E57373 !important;
+}
 #log-banner{
     background-color: #ee6e73;
 }
