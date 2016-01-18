@@ -12,14 +12,14 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 <ul id="blogsort" class="padding-horizontal">
 <?php $i=0; foreach($sort_cache as $value): if ($value['pid'] != 0) continue; ?>
     <li>
-        <a class="light" href="<?php echo Url::sort($value['sid']); ?>">
+        <a class="light red-text text-lighten-2" href="<?php echo Url::sort($value['sid']); ?>">
             <?php echo $value['sortname']; ?>(<?php echo $value['lognum'] ?>)
         </a>
         <?php if (!empty($value['children'])): ?>
             <ul>
             <?php $children = $value['children']; foreach ($children as $key): $value = $sort_cache[$key]; ?>
                 <li>
-                    <a class="light" href="<?php echo Url::sort($value['sid']); ?>">
+                    <a class="light red-text text-lighten-2" href="<?php echo Url::sort($value['sid']); ?>">
                         <?php echo $value['sortname']; ?>(<?php echo $value['lognum'] ?>)
                     </a>
                 </li>

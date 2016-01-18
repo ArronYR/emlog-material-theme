@@ -24,6 +24,8 @@
             }
         });
 
+        $('#pagenavi').find('a').wrap('<li class="waves-effect"></li>').end().find('span').wrap('<li class="active"></li>')
+
         $("#goto-top").click(function(){
             $('body,html').animate({scrollTop:0},1000);
             return false;

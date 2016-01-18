@@ -12,7 +12,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 <ul id="record" class="padding-horizontal">
 <?php foreach($record_cache as $value): ?>
     <li>
-        <a class="light" href="<?php echo Url::record($value['date']); ?>">
+        <a class="light red-text text-lighten-2" href="<?php echo Url::record($value['date']); ?>">
             <?php echo $value['record']; ?>(<?php echo $value['lognum']; ?>)
         </a>
     </li>

@@ -7,7 +7,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 <div class="section" id="index-banner">
     <div class="container">
         <div class="row">
-            <div class="col s12 m9">
+            <div class="col s12">
                 <h1 class="header center-on-small-only">
                     <a href="<?php echo BLOG_URL; ?>" class="white-text waves-effect waves-light">
                         <?php echo $blogname; ?>

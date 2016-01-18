@@ -12,7 +12,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 <?php $i=0; foreach($tag_cache as $value): ?>
     <?php $i++; if($i < 16):?>
     <span style="font-size:<?php echo $value['fontsize']; ?>pt; line-height:30px;">
-        <a class="light padding-horizontal-xs" href="<?php echo Url::tag($value['tagurl']); ?>" title="<?php echo $value['usenum']; ?> 篇文章">
+        <a class="light red-text text-lighten-2 padding-horizontal-xs" href="<?php echo Url::tag($value['tagurl']); ?>" title="<?php echo $value['usenum']; ?> 篇文章">
             <?php echo $value['tagname']; ?>
         </a>
     </span>

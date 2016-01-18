@@ -107,6 +107,7 @@ footer.page-footer .links{
 
 pre[class*=lang-]{
     max-height: 320px;
+    font-size: 14px;
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
@@ -131,12 +132,27 @@ pre[class*=lang-]{
     hyphens: none;
 }
 
-#content h1{font-size: 22px;}
+.pagination li.active{
+    color: #fff;
+}
+
+#log-banner{
+    background-color: #ee6e73;
+}
+#log-banner .header{
+    color: #fff;
+}
+
+#content h1{font-size: 24px;}
 #content h2{font-size: 20px;}
 #content h3{font-size: 18px;}
 #content h4{font-size: 16px;}
 #content h5{font-size: 14px;}
 #content h6{font-size: 12px;}
+
+#content img{
+    max-width: 100%;
+}
 
 /* Padding helpers */
 .padding {

@@ -17,7 +17,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
         <div class="comment-author">
             <?php echo $value['name']; ?>&nbsp;:
         </div>
-        <a class="light" href="<?php echo $url; ?>"><?php echo $value['content']; ?></a>
+        <a class="light red-text text-lighten-2" href="<?php echo $url; ?>"><?php echo $value['content']; ?></a>
     </li>
 <?php endforeach; ?>
 </ul>
