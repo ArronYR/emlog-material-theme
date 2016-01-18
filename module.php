@@ -16,6 +16,8 @@ $newLogs_cache = $CACHE->readCache('newlog');
 $record_cache = $CACHE->readCache('record');
 // 文章所属分类
 $log_cache_sort = $CACHE->readCache('logsort');
+// 文章标签
+$log_cache_tags = $CACHE->readCache('logtags');
 
 $istwitter = Option::get('istwitter');
 

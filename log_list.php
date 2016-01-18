@@ -48,6 +48,28 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                             <div class="light log-desc">
                                 <?php echo $value['log_description'];?>
                             </div>
+                            <div class="margin-top-sm">
+                                <div class="tag" style="display: inline-block;">
+                                    <span class="light teal-text text-lighten-2">标签: &nbsp;</span>
+                                    <?php if (!empty($log_cache_tags[$value['logid']])):?>
+                                        <?php foreach ($log_cache_tags[$value['logid']] as $tag):?>
+                                            <a class="light" href="<?php echo Url::tag($tag['tagurl']);?>">
+                                                <span class="tag-badge">
+                                                    <?php echo $tag['tagname'];?>
+                                                </span>
+                                            </a>
+                                        <?php endforeach;?>
+                                    <?php endif;?>
+                                </div>
+                                <div class="tag right" style="display: inline-block;">
+                                    <a class="light teal-text text-darken-2 margin-left-sm" href="<?php echo $value['log_url']; ?>#comments">
+                                        评论(<?php echo $value['comnum']; ?>)
+                                    </a>
+                                    <a class="light teal-text text-darken-2 margin-left-sm" href="<?php echo $value['log_url']; ?>">
+                                        浏览(<?php echo $value['views']; ?>)
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <?php endforeach;?>
