@@ -199,25 +199,56 @@ pre[class*=lang-]{
     max-width: 100%;
 }
 
+#twitter .collapsible-header,
 .comments .collapsible-header{
     line-height: 2rem;
 }
+#twitter .avatar,
 .comments .avatar{
     display: inline-block;
     vertical-align: middle;
     padding-top: 8px;
 }
+#twitter .avatar img,
 .comments .avatar img{
     border-radius: 4px;
 }
+.twitter-time,
 .comment-time{
     font-size: 12px;
 }
 .collapsible-body p{
     padding: 2rem 2rem 1rem;
 }
+.collapsible-body .twitter-reply,
 .collapsible-body .comment-reply{
     padding: 0rem 0rem 1rem;
+}
+
+#twitter{
+    min-height: 200px;
+}
+.twitter-reply-list{
+    padding: 0rem 2rem 0rem;
+}
+.twitter-reply-list li{
+    font-weight: 300;
+    padding: 0.5rem 0rem;
+}
+.twitter-reply-list .name{
+    color: #26a69a;
+}
+.twitter-reply-list .time{
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.twitter-reply-list a{
+    color: #E57373 !important;
+}
+.twitter-reply-form{
+    padding: 0rem 2rem 0rem;
+    display: none;
 }
 
 /* Padding helpers */

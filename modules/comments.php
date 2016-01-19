@@ -24,7 +24,7 @@ $isGravatar = Option::get('isgravatar');
                     </div>
                 <?php endif; ?>
                 <b><?php echo $comment['poster']; ?> </b>
-                <span class="comment-time right-align"><?php echo $comment['date']; ?></span>
+                <span class="light comment-time"><?php echo $comment['date']; ?></span>
             </div>
             <div class="collapsible-body">
                 <p><?php echo $comment['content']; ?></p>

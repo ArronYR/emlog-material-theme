@@ -32,9 +32,13 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                     <label for="comment">评论内容</label>
                 </div>
             </div>
-            <div class="row padding-bottom">
+            <div class="row margin-bottom-0">
                 <div class="input-field col s6">
                     <?php echo $verifyCode; ?>
+                </div>
+            </div>
+            <div class="row padding-bottom">
+                <div class="input-field col s6">
                     <button class="btn waves-effect waves-light" type="submit" tabindex="6" name="action" id="comment_submit">
                         发表评论
                         <i class="material-icons right">send</i>
