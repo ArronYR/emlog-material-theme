@@ -77,10 +77,10 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                 <?php endif;?>
             </div>
         </div>
-        <div class="comments">
+        <div class="comments padding-top">
             <?php include View::getView('modules/comments');?>
         </div>
-        <div class="comments">
+        <div class="comment-post">
             <?php include View::getView('modules/comments_post');?>
         </div>
         <div style="clear:both;"></div>

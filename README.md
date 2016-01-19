@@ -15,7 +15,7 @@
 
 ## Usage
 
-方式一：[Github](https://github.com/ArronYR/emlog-material-theme)，点击右方【Download ZIP】现在文件，将其移入`emlog`的`content/templates/`目录下，进入网站后台，点击`模板`选项，选择`MaterialTheme `即可。
+方式一：[Github](https://github.com/ArronYR/emlog-material-theme)，点击右方【Download ZIP】现在文件，将其移入`emlog`的`content/templates/`目录下，进入网站后台，点击【模板】选项，选择`MaterialTheme `即可。
 
 方式二：在网站后台的【应用中心】下载（确保`content/templates/`有写入权限）。
 
@@ -28,11 +28,11 @@
 通过修改主题目录下的`header.php`引入不同的样式即可：
 
 ```css
-<link href="<?php echo TEMPLATE_URL; ?>css/prettify-default-theme.css" rel="stylesheet">
-<link href="<?php echo TEMPLATE_URL; ?>css/prettify-desert-theme.css" rel="stylesheet">
-<link href="<?php echo TEMPLATE_URL; ?>css/prettify-sunburst-theme.css" rel="stylesheet">
-<link href="<?php echo TEMPLATE_URL; ?>css/prettify-obsidian-theme.css" rel="stylesheet">
-<link href="<?php echo TEMPLATE_URL; ?>css/prettify-doxy-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL;?>css/prettify-default-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL;?>css/prettify-desert-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL;?>css/prettify-sunburst-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL;?>css/prettify-obsidian-theme.css" rel="stylesheet">
+<link href="<?php echo TEMPLATE_URL;?>css/prettify-doxy-theme.css" rel="stylesheet">
 ```
 
 ## About me

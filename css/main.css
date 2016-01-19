@@ -199,6 +199,27 @@ pre[class*=lang-]{
     max-width: 100%;
 }
 
+.comments .collapsible-header{
+    line-height: 2rem;
+}
+.comments .avatar{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 8px;
+}
+.comments .avatar img{
+    border-radius: 4px;
+}
+.comment-time{
+    font-size: 12px;
+}
+.collapsible-body p{
+    padding: 2rem 2rem 1rem;
+}
+.collapsible-body .comment-reply{
+    padding: 0rem 0rem 1rem;
+}
+
 /* Padding helpers */
 .padding {
     padding: 1.6rem;
