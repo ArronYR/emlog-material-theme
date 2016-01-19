@@ -25,7 +25,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
         <?php endif;?>
     </div>
 
-    <div class="container light" id="content">
+    <div class="container light padding-top" id="content">
         <?php echo $log_content; ?>
         <div class="margin-vertical">
             <?php if(!empty($log_cache_sort[$logid])): ?>
