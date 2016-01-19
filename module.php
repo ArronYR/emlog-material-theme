@@ -30,8 +30,10 @@ $randLogs = $Log_Model->getRandLog($index_randlognum);
 
 global $widgets_exist;
 global $widgets_num;
+global $widgets_arr;
 $widgets_exist = [];
 $widgets_num = 0;
+$widgets_arr = array('home');
 
 // 个人资料
 function widget_blogger($title, $exists=true){
@@ -42,90 +44,100 @@ function widget_blogger($title, $exists=true){
 
 // 日历
 function widget_calendar($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['calendar']['title'] = $title;
     $widgets_exist['calendar']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'calendar');
 }
 
 // 标签
 function widget_tag($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['tag']['title'] = $title;
     $widgets_exist['tag']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'tag');
 }
 
 // 分类
 function widget_sort($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['sort']['title'] = $title;
     $widgets_exist['sort']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'sort');
 }
 
 // 最新微语
 function widget_twitter($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['twitter']['title'] = $title;
     $widgets_exist['twitter']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'twitter');
 }
 
 // 最新评论
 function widget_newcomm($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['newcomm']['title'] = $title;
     $widgets_exist['newcomm']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'newcomm');
 }
 
 // 最新文章
 function widget_newlog($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['newlog']['title'] = $title;
     $widgets_exist['newlog']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'newlog');
 }
 
 // 热门文章
 function widget_hotlog($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['hotlog']['title'] = $title;
     $widgets_exist['hotlog']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'hotlog');
 }
 
 // 随机文章
 function widget_random_log($title, $exists=true){
-    global $widgets_exist, $widgets_num;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['randlog']['title'] = $title;
     $widgets_exist['randlog']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'randlog');
 }
 
 // 搜索
 function widget_search($title, $exists=true){
-    global $widgets_exist;
+    global $widgets_exist, $widgets_num;
     $widgets_exist['search']['title'] = $title;
     $widgets_exist['search']['exists'] = $exists;
 }
 
 // 归档
 function widget_archive($title, $exists=true){
-    global $widgets_exist;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['archive']['title'] = $title;
     $widgets_exist['archive']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'archive');
 }
 
 // 自定义组件
 function widget_custom_text($title, $content, $exists=true){
-    global $widgets_exist;
+    global $widgets_exist, $widgets_num, $widgets_arr;
     $widgets_exist['custom']['title'] = $title;
     $widgets_exist['custom']['content'] = $content;
     $widgets_exist['custom']['exists'] = $exists;
     $widgets_num += 1;
+    array_push($widgets_arr, 'custom');
 }
 
 // 友情链接
