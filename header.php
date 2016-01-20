@@ -27,14 +27,16 @@ require_once View::getView('module');
     <link href="<?php echo TEMPLATE_URL; ?>css/icon.css" rel="stylesheet">
     <link href="<?php echo TEMPLATE_URL; ?>css/prettify-obsidian-theme.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/ghpages-materialize.css"/>
-    <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/main.css?<?php echo rand();?>"/>
+    <link type="text/css" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>css/main.css"/>
 
     <script src="<?php echo BLOG_URL; ?>admin/editor/plugins/code/prettify.js" type="text/javascript"></script>
     <script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/materialize.min.js"></script>
     <script src="<?php echo BLOG_URL; ?>include/lib/js/common_tpl.js" type="text/javascript"></script>
-    <script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/main.js?<?php echo rand();?>"></script>
-
+    <script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/main.js"></script>
+    <!--[if lt IE 9]>
+    <script src="<?php echo TEMPLATE_URL; ?>/js/html5.js"></script>
+    <![endif]-->
     <?php doAction('index_head'); ?>
 </head>
 
