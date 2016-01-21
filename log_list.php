@@ -58,7 +58,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                                         <?php endforeach;?>
                                     <?php endif;?>
                                 </div>
-                                <div class="tag right" style="display: inline-block;">
+                                <div class="tag right hide-on-small-only" style="display: inline-block;">
                                     <a class="light teal-text text-darken-2 margin-left-sm" href="<?php echo $value['log_url']; ?>#comments">
                                         评论(<?php echo $value['comnum']; ?>)
                                     </a>

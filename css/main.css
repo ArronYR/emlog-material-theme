@@ -150,6 +150,7 @@ pre[class*=lang-]{
 }
 .log-desc img{
     width: 100%;
+    /*display: none;*/
 }
 .log-desc ol{
     list-style: none !important;
