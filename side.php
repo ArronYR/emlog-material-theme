@@ -10,7 +10,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 
 ?>
 
-<div class="col m12 l3">
+<div class="col m12 l3 hide-on-med-and-down">
     <div class="row">
         <?php for ($w=0; $w < count($widgets_arr); $w++):?>
             <?php $widget_name = $widgets_arr[$w];?>
