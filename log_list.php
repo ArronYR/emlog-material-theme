@@ -5,10 +5,12 @@
 if(!defined('EMLOG_ROOT')) {exit('error!');}
 ?>
 
-<?php doAction('index_loglist_top'); ?>
 
 <main>
+
     <?php require_once View::getView('modules/banner');?>
+
+    <?php doAction('index_loglist_top'); ?>
 
     <div class="container">
         <div class="row padding-top">

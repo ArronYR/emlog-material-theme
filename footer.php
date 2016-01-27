@@ -18,6 +18,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
             <a class="grey-text text-lighten-4 right" href="https://github.com/ArronYR/emlog-material-theme">Theme By ArronYR</a>
         </div>
     </div>
+    <?php doAction('index_footer'); ?>
 </footer>
 
 <!-- 添加 class click-to-toggle 为点击切换, horizontal 为水平-->
