@@ -17,9 +17,9 @@
 
 方式一：[Github](https://github.com/ArronYR/emlog-material-theme)，点击右方【Download ZIP】现在文件，将其移入`emlog`的`content/templates/`目录下，进入网站后台，点击【模板】选项，选择`MaterialTheme `即可。
 
-方式二：在网站后台的【应用中心】下载（确保`content/templates/`有写入权限）。
+方式二：在网站后台的【应用中心】【模板】下载（确保`content/templates/`有写入权限）。
 
-方式二：在网站后台的【模板】->【安装模板】中上传【方式一】下载的zip包即可。
+方式三：在网站后台的【模板】->【安装模板】中上传【方式一】下载的zip包即可。
 
 ## Code Themes
 
