@@ -21,6 +21,6 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
             <?php endif;?>
         <?php endfor;?>
     </div>
-    <?php doAction('diff_side');?
+    <?php doAction('diff_side');?>
 </div>
 
