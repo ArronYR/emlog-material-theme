@@ -31,7 +31,7 @@ $randLogs = $Log_Model->getRandLog($index_randlognum);
 global $widgets_exist;
 global $widgets_num;
 global $widgets_arr;
-$widgets_exist = [];
+$widgets_exist = array();
 $widgets_num = 0;
 $widgets_arr = array('home');
 
