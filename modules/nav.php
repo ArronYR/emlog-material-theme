@@ -37,6 +37,22 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                 $value['url'] = $value['isdefault'] == 'y' ? BLOG_URL . $value['url'] : trim($value['url'], '/');
                 $current_tab = BLOG_URL . trim(Dispatcher::setPath(), '/') == $value['url'] ? 'active' : '';
             ?>
+            <?php if (!empty($value['children'])) :?>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li class="bold">
+                            <a class="collapsible-header waves-effect waves-light"><?php echo $value['naviname']; ?></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <?php foreach ($value['children'] as $row):?>
+                                        <li><a class="waves-effect waves-light" href="<?php echo Url::sort($row['sid']);?>" ><?php echo $row['sortname'];?></a></li>
+                                    <?php endforeach;?>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            <?php endif;?>
             <?php if (!empty($value['childnavi'])) :?>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
@@ -53,23 +69,8 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
                         </li>
                     </ul>
                 </li>
-            <?php elseif (!empty($value['children'])) :?>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold">
-                            <a class="collapsible-header waves-effect waves-light"><?php echo $value['naviname']; ?></a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <?php foreach ($value['children'] as $row):?>
-                                        <?php $newtab = $row['newtab'] == 'y' ? 'target="_blank"' : '';?>
-                                        <li><a class="waves-effect waves-light" href="<?php echo $row['url'];?>" <?php echo $newtab;?>><?php echo $row['naviname'];?></a></li>
-                                    <?php endforeach;?>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            <?php else:?>
+            <?php endif;?>
+            <?php if (empty($value['children']) && empty($value['childnavi'])) :?>
                 <li class="bold <?php echo $current_tab;?>">
                     <a href="<?php echo $value['url']; ?>" <?php echo $newtab;?> class="waves-effect waves-light"><?php echo $value['naviname']; ?></a>
                 </li>
