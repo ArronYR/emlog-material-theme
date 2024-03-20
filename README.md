@@ -2,8 +2,6 @@
 
 ## Preview
 
-点击[此处](http://oblog.helloarron.com/)预览。
-
 ![图片](http://7rfkwd.com1.z0.glb.clouddn.com/preview.jpg)
 
 ## Features
@@ -41,10 +39,4 @@
 因为只默认模板可以自定义banner，其它模板没这功能。所以如果需要自定义请在【模板】设置中先上传该banner图片，然后切换回该主题即可。
 
 ![banner](http://7rfkwd.com1.z0.glb.clouddn.com/emlog-banner.png)
-
-## About me
-
-主页：[http://helloarron.com/](http://helloarron.com/)
-
-博客：[http://blog.helloarron.com/](http://blog.helloarron.com/)
 
